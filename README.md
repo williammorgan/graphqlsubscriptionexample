@@ -26,7 +26,7 @@ You can run the tests with:
 
 ## Using It ##
 
-Once it is running, you can use the built in GraphiQL application served at '127.0.0.1:8000/graphql/' to issue query and subscription requests like these from your browser:
+Once it is running, you can use the built in GraphiQL application served at `127.0.0.1:8000/graphql/` to issue query and subscription requests like these from your browser:
 
     query one{
       currentTemperature{
@@ -48,7 +48,7 @@ Once it is running, you can use the built in GraphiQL application served at '127
 
 ## Some Notes ##
 
-I used this library for the websocket subscriptions:
+I used this library for the websocket subscriptions:  
 https://github.com/datadvance/DjangoChannelsGraphqlWs
 
 becasue of a maintenance issue with this one:  
