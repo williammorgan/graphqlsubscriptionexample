@@ -1,11 +1,11 @@
 
-# GraphQL Subscriptions Example #
+# GraphQL Subscription Example #
 
 The point of this project is to demonstrate the use of GraphQL subscriptions over websockets in Django as simply as possible.
 
 It uses a pretend temperature sensor, which just generates a plausible random number once a second.  This number is saved to the database and reported to all the subscribers.  Subscribers all see the same values, and GraphQL queries made at that time see the same value as the subscribers.
 
-This uses the django built in debug webserver instead of a production ready webserver, so consider it for demonstration purposes only.
+This uses the Django built in debug webserver instead of a production ready webserver, so consider it for demonstration purposes only.
 
 ## Setting It Up ##
 
