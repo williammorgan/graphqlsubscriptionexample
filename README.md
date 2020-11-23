@@ -21,7 +21,7 @@ To run without docker, you should make a virtualenv in a location of your choosi
     pip install --editable .
     python graphqlsubscriptionexample/manage.py runserver 0:8001
 
-If you want to have the exact versions of libraries I tested with, you can use `pip install -r requirements.txt` instead of the other `pip install` step above.  That is what the docker container does.
+If you want to have the exact versions of libraries I tested with, you can use `pip install -r requirements.txt` instead of the other `pip install` step above.  That is what the Dockerfile does.
 
 You can run the tests with:
 
