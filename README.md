@@ -26,7 +26,7 @@ You can run the tests with:
 
 ## Using It ##
 
-Once it is running, you can use the built in GraphiQL application served at 127.0.0.1:8000/graphql to issues query and subscription commands like these from your browser:
+Once it is running, you can use the built in GraphiQL application served at '127.0.0.1:8000/graphql/' to issue query and subscription requests like these from your browser:
 
     query one{
       currentTemperature{
