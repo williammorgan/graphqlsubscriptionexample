@@ -9,16 +9,19 @@ This uses the Django built in debug webserver instead of a production ready webs
 
 ## Setting It Up ##
 
-The simplest way is to run it with docker.  In a fresh checkout, run:
+The simplest way is to run it with docker and map the exposed port 8000.  In a fresh checkout, run:
 
     docker build -t graphqlsubscriptionexample .
     docker run -p8000:8000 graphqlsubscriptionexample
 
-To run without docker, you should make a virtualenv in a location of your choosing (below assumes ~/.venvs) and install the dependencies.
+To run without docker, you should make a virtualenv in a location of your choosing (below assumes ~/.venvs) and install the dependencies. This project was only tested with python3.8.
 
     python3.8 -m venv ~/.venvs/graphqlsubscriptionexample
     source ~/.venvs/graphqlsubscriptionexample/bin/activate
     pip install --editable .
+    python graphqlsubscriptionexample/manage.py runserver 0:8001
+
+If you want to have the exact versions of libraries I tested with, you can use `pip install -r requirements.txt` instead of the other `pip install` step above.  That is what the docker container does.
 
 You can run the tests with:
 
