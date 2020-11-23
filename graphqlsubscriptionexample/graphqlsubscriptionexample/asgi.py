@@ -9,8 +9,19 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
 
 import os
 
+import channels.routing
+from django.urls import path
 from django.core.asgi import get_asgi_application
+from temperatureapp.graphql_ws_consumer import GraphqlWsConsumer
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'graphqlsubscriptionexample.settings')
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'graphqlsubscriptionexample.settings'
+)
 
-application = get_asgi_application()
+application = channels.routing.ProtocolTypeRouter({
+    "https": get_asgi_application(),
+    "websocket": channels.routing.URLRouter([
+        path("graphql/", GraphqlWsConsumer)
+    ]),
+})
